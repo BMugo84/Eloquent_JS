@@ -15,5 +15,22 @@ function range(start, end) {
     }
     return range
  }
-console.log(range(2,10))
+console.log(range(1,10))
 
+function sum(range) {
+    let sum = 0
+    for (let i = 0; i < range.length; i++) {
+        sum += range[i]
+        
+    }
+    return sum
+}
+console.log(sum(range(1,10)))
+
+// const array = [1, 2, 3, 4];
+// let sum = 0;
+
+// for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+// }
+// console.log(sum);
