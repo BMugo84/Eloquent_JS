@@ -9,12 +9,11 @@
 // with negative step values so that range(5, 2, -1) produces [5, 4, 3, 2]
 
 function range(start, end) {
-    let range = [start]
-    number = start
-    while (number >= start && number < end) {
-        number = number + 1
+    let range = []
+    for (let number = start; number >=start && number <= end; number++){
         range.push(number)
     }
     return range
  }
 console.log(range(2,10))
+
