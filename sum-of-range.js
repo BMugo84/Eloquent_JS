@@ -8,29 +8,45 @@
 // the function acll range (1, 10, 2) should return [1, 3,5, 7, 9] .Make sure it also works 
 // with negative step values so that range(5, 2, -1) produces [5, 4, 3, 2]
 
-function range(start, end) {
+function range(start, end, step) {
     let range = []
-    for (let number = start; number >=start && number <= end; number++){
-        range.push(number)
+    if (step < 0) {
+        for (let number = start; number <= start && number >= end; number+=step) {
+            range.push(number)
+        }
+    } else if (step == null) {
+        for (let number = start; number >=start && number <= end; number++){
+            
+            range.push(number)
+        }
+    } 
+    else {
+        for (let number = start; number >=start && number <= end; number+=step){
+            
+            range.push(number)
+        }
     }
+
     return range
  }
-console.log(range(1,10))
+console.log(range(100,10,-1))
 
-function sum(range) {
-    let sum = 0
-    for (let i = 0; i < range.length; i++) {
-        sum += range[i]
+// function sum(range) {
+//     let sum = 0 
+//     for (let i = 0; i < range.length; i++) {
+//         sum += range[i]
         
-    }
-    return sum
-}
-console.log(sum(range(1,10)))
-
-// const array = [1, 2, 3, 4];
-// let sum = 0;
-
-// for (let i = 0; i < array.length; i++) {
-//     sum += array[i];
+//     }
+//     return sum
 // }
-// console.log(sum);
+// console.log(sum(range(1,10)))
+
+// if (step == undefined) {
+//     number++
+//     range.push(number)
+// } else {
+//     range.push(number)
+// }
+
+
+
