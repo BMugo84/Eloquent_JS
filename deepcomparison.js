@@ -32,7 +32,7 @@
 
 function deepEqual(a,b) {
     if (typeof(a) == 'object' && typeof(b)=='object' && a && b) {
-        
+        if (Object.keys(a).length != Object.keys(b).length) return false
             return true 
         
         
