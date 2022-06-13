@@ -5,3 +5,10 @@ function repeatlog(n, action) {
     }
 }
 repeatlog(5,console.log)
+
+
+let labels = []
+repeatlog(5, i => {
+    labels.push(`Unit ${i + 1}`)
+})
+console.log(labels)
