@@ -96,10 +96,10 @@
 
 function arrayToList(array) {
     let list = {}
-    for (let i = 0; i < array.length; i++) {
-        if (i == array.length) {
-            return list.rest = null
-        }
+    for (let i = array.length -1; i >=0; i--) {
+        // if (i == array.length) {
+        //     return list.rest = null
+        // }
         
         // Object.assign(list ,{value: array[i],rest: {list}})
         list = {value: array[i], rest:list}
@@ -114,3 +114,22 @@ console.log(JSON.stringify(arrayToList([1,2,3])))
 // console.log(list)
 // Object.assign(list, {rest:{list}})
 // console.log(list.rest.list.rest.list)
+
+function listToArray(list) {
+    let array = []
+    for (let node = list; node ; node = node.rest) {
+        array.push(node.value)
+    }
+    return array
+}
+
+// let list = JSON.stringify({value:1, rest:2})
+// console.log(JSON.parse(list))
+// console.log(list)
+
+// let list = {value:1, rest: {value:2, end: 3}}
+// console.log(Object.keys(list))
+// let keys = Object.keys(list.rest)
+// console.log(keys)
+// console.log(keys[0])
+
