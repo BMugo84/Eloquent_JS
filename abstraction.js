@@ -1,7 +1,7 @@
-function repeatlog(n) {
+function repeatlog(n, action) {
     for (let i = 0; i < n; i++) {
-        console.log(i);
+        action(i);
         
     }
 }
-console.log(repeatlog(10))
+repeatlog(5,console.log)
