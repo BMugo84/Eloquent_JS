@@ -1125,7 +1125,7 @@ var SCRIPTS = [
 
     function filter(array, test) {
         let passed = []
-        for (let element of array) {
+        for (element of array) {
             if (test(element)){
                 passed.push(element)
             }
@@ -1133,3 +1133,4 @@ var SCRIPTS = [
         return passed
     }
     console.log(JSON.stringify(filter(SCRIPTS, script => script.living)))
+    console.log(JSON.stringify(SCRIPTS.filter(s=>s.direction == "ttb")))
