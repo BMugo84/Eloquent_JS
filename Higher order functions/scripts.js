@@ -1123,4 +1123,13 @@ var SCRIPTS = [
     global.SCRIPTS = SCRIPTS;
 
 
-
+    function filter(array, test) {
+        let passed = []
+        for (let element of array) {
+            if (test(element)){
+                passed.push(element)
+            }
+        }
+        return passed
+    }
+    console.log(JSON.stringify(filter(SCRIPTS, script => script.living)))
