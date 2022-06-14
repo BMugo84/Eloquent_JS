@@ -1134,3 +1134,13 @@ var SCRIPTS = [
     }
     console.log(JSON.stringify(filter(SCRIPTS, script => script.living)))
     console.log(JSON.stringify(SCRIPTS.filter(s=>s.direction == "ttb")))
+
+    function map(array, transform) {
+        let mapped = []
+        for(let element of array){
+            mapped.push(transform(element))
+        }
+        return mapped
+    }
+    let rtlScripts = filter(SCRIPTS, script =>script.direction == "rtl")
+    console.log(JSON.stringify(map(rtlScripts,s =>s.name)))
