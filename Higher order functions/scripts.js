@@ -1230,3 +1230,9 @@ function countBy(items, groupName) {
 console.log(JSON.stringify(countBy([1,2,3,4,5], n=> n > 2 )))
 
 // reference to understand better https://www.reddit.com/r/learnjavascript/comments/ducifb/eloquent_javascript_chap5_recognizing_text/
+arr = [5,2,7,1,6,5,5,2]
+output = {}
+arr.forEach((e, index) => {
+  output [e]? output[e] += 1: output[e] = 1
+});
+console.log(output)
