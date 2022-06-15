@@ -1206,9 +1206,10 @@ function characterScript(code) {
   }
   return null
 }
-console.log(characterScript(128052))
+console.log(characterScript(117))
 
 let horseshoe = "u🐴👟"
 console.log(horseshoe.length)
 console.log(horseshoe.codePointAt(0))
+console.log(horseshoe.charCodeAt(1))
 
