@@ -1195,3 +1195,15 @@ for(let script of SCRIPTS){
   }
 }
 console.log(total/count)
+
+function characterScript(code) {
+  for (const script of SCRIPTS) {
+    if (script.ranges.some(([from, to]) => {
+      return code >= from && code < to
+    })){
+      return script
+    }
+  }
+  return null
+}
+console.log(characterScript(5322))
