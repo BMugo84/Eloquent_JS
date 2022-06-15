@@ -1165,3 +1165,18 @@ console.log(JSON.stringify(SCRIPTS.reduce((a, b) => {
    return characterCount(a) < characterCount(b) ? b:a
 })))
 
+let biggest = null
+for (let script of SCRIPTS){
+  if (biggest == null || characterCount(biggest) < characterCount(script)){
+    biggest = script
+  }
+}
+console.log(biggest)
+
+let smallest = biggest
+for (let script of SCRIPTS) {
+  if (smallest == null || characterCount(smallest) > characterCount(script)){
+    smallest = script
+  }
+}
+console.log(JSON.stringify(smallest))
