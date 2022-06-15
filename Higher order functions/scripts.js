@@ -1180,3 +1180,8 @@ for (let script of SCRIPTS) {
   }
 }
 console.log(JSON.stringify(smallest))
+
+function averageOfYear(array){
+  return array.reduce((a,b) =>a + b)/ array.length
+}
+console.log(JSON.stringify(averageOfYear(SCRIPTS.filter(s => s.living).map(s =>s.year))))
