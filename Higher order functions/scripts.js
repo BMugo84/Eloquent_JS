@@ -1185,3 +1185,13 @@ function averageOfYear(array){
   return array.reduce((a,b) =>a + b)/ array.length
 }
 console.log(JSON.stringify(Math.round(averageOfYear(SCRIPTS.filter(s => !s.living).map(s =>s.year)))))
+
+
+let total = 0, count = 0
+for(let script of SCRIPTS){
+  if (script.living){
+    total += script.year
+    count +=1
+  }
+}
+console.log(total/count)
