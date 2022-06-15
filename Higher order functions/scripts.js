@@ -1154,3 +1154,5 @@ var SCRIPTS = [
         return current
     }
     console.log(reduce([1,2,3,4],(a,b) => a + b, 1))
+    console.log([1,2,3,4,5].reduce((a,b) => a+b, 0))
+
