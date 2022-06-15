@@ -1156,3 +1156,12 @@ var SCRIPTS = [
     console.log(reduce([1,2,3,4],(a,b) => a + b, 1))
     console.log([1,2,3,4,5].reduce((a,b) => a+b, 0))
 
+function characterCount(script) {
+  return script.ranges.reduce((count, [from, to]) =>{
+    return count + (to - from)
+  } , 0)
+}
+console.log(JSON.stringify(SCRIPTS.reduce((a, b) => {
+   return characterCount(a) < characterCount(b) ? b:a
+})))
+
