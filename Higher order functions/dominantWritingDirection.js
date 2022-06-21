@@ -1124,7 +1124,12 @@ var SCRIPTS = [
 
 
 
-
+//Write a function that computes the dominant writing direction in a string of
+// text. Remember that each script object has a direction property that can be
+// "ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).
+// The dominant direction is the direction of a majority of the characters that
+// have a script associated with them. The characterScript and countBy functions
+// defined earlier in the chapter are probably useful here.
 
 
 
@@ -1134,7 +1139,7 @@ var SCRIPTS = [
             return code >= from && code < to
         } )){
             { 
-                return script.direction
+                return script
             }
         }
      }
@@ -1153,24 +1158,35 @@ var SCRIPTS = [
              counts[known].count++
          }
      }
-     return JSON.stringify(counts)
+     return counts
  }
  console.log(countBy([1,2,3,4,5,6], n => n>2))
 
 
+//  function dominantDirection(text) {
+//      let direction = countBy(text, char => characterScripts(char.codePointAt(0)))
+//     // for (let char of text){
+//     //     console.log(countBy(text, char => characterScripts(char.codePointAt(0))))
+//     //     // console.log(characterScripts(char.codePointAt(0)))
+//     //     // direction.push(countBy(text, char => characterScripts(char.codePointAt(0))))
+//     // }
+//     return direction
+//  }
+//  console.log(dominantDirection('英国的狗说woof, 俄罗斯的狗说"тяв"'))
+
+//  console.log([1,2,3,4,5].filter(s => s<5))
+
  function dominantDirection(text) {
-     let direction = countBy(text, char => characterScripts(char.codePointAt(0)))
-    // for (let char of text){
-    //     console.log(countBy(text, char => characterScripts(char.codePointAt(0))))
-    //     // console.log(characterScripts(char.codePointAt(0)))
-    //     // direction.push(countBy(text, char => characterScripts(char.codePointAt(0))))
-    // }
-    return direction
- }
- console.log(dominantDirection('英国的狗说woof, 俄罗斯的狗说"тяв"'))
-
- console.log([1,2,3,4,5].filter(s => s<5))
-
+  let scripts = countBy(text, char => {
+    let script = characterScripts(char.codePointAt(0));
+    return script ? script.direction : "none";
+  }).filter(({name}) => name != "none");
+ 
+  if (scripts.length == 0) return "ltr";
+  
+  return scripts.reduce((a, b) => a.count > b.count ? a : b).name;
+}
+console.log(dominantDirection('英国的狗说woof, 俄罗斯的狗说"тяв"'))
 
 
 
