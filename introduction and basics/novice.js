@@ -503,10 +503,10 @@
 // console.log(todolist)
 // console.log(todolist.indexOf("knives"))
 
-// let power = ["a","b","c","d","e"]
-// console.log(power.slice(0,2))
-// console.log(power.slice(3))
-// console.log(power.slice(0,2).concat(power.slice(3)))
+let power = ["a","b","c","d","e"]
+console.log(power.slice(0,2))
+console.log(power.slice(3))
+console.log(power.slice(0,2).concat(power.slice(3)))
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
