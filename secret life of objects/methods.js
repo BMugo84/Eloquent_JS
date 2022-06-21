@@ -9,3 +9,5 @@ let hungryRabbit = {type: "hungry", speak}
  
 whiteRabbit.speak("I hate the RAIN! Makes my fur all wet and dirty")
 hungryRabbit.speak("All these juicy carrots make me drool!")
+
+speak.call(hungryRabbit, "burp")
