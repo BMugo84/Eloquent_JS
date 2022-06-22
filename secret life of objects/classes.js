@@ -23,3 +23,5 @@ Rabbit.prototype.speak = function(line){
 let weirdRabbit = new Rabbit('weird')
 
 weirdRabbit.speak('Booga Wooga')
+console.log(Object.getPrototypeOf(Rabbit)==Function.prototype)
+console.log(Object.getPrototypeOf(weirdRabbit) == Rabbit.prototype)
