@@ -14,8 +14,11 @@ class Temperature {
     }
     set fahrenheit(value){
         this.celsius = (value - 32) / 1.8
-        return  this.celsius
     }
+    static fromFahrenheit(value) {
+        return new Temperature((value - 32) / 1.8)
+    }
+
     static fromFahrenheit(value) {
         return new Temperature((value - 32) / 1.8)
     }
@@ -24,9 +27,10 @@ class Temperature {
     }
     set kelvin(value){
         this.celsius = (value -273.15)
-        return this.celsius
+    }   
+    static fromKelvin(value){
+        return new Temperature(value - 273.15)
     }
-
 }
 
 let temp = new Temperature(22)
