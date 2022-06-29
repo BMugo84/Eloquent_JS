@@ -8,13 +8,14 @@ function multiplyAll(arr) {
     // only change code below this line
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
-            console.log(arr[i][j])
+            product = product * arr[i][j]
             
         }
         
     }
 
     // only change code above this line
+    console.log(product)
     return product
 }
 multiplyAll([[1,2],[3,4],[5,6,7]])
