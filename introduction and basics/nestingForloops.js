@@ -6,10 +6,10 @@
 function multiplyAll(arr) {
     let product = 1
     // only change code below this line
-for (let i = 0; i < array.length; i++) {
-
-    
-}
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+        
+    }
 
     // only change code above this line
     return product
