@@ -50,3 +50,8 @@ if (true) {
     console.log(greet)
 }
 console.log(greet)
+
+// const
+
+const salimia = "jambo"
+salimia = "say habari gani instead"
