@@ -41,6 +41,6 @@ console.log(greeting)
 //updating 
 
 let greeted = "say Hi"
-greeted = "say hello instead"
+let greeted = "say hello instead"
 console.log(greeted)
 
