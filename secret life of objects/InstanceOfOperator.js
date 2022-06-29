@@ -36,3 +36,4 @@ class SymmetricMatrix extends Matrix {
    
 }
 
+console.log(new SymmetricMatrix(2) instanceof SymmetricMatrix)
