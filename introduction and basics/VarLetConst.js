@@ -41,6 +41,12 @@ console.log(greeting)
 //updating 
 
 let greeted = "say Hi"
-let greeted = "say hello instead"
+ greeted = "say hello instead"
 console.log(greeted) 
 
+let greet = "say hi"
+if (true) {
+    let greet = "say Helloo insead"
+    console.log(greet)
+}
+console.log(greet)
