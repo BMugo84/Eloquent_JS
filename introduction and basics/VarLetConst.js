@@ -42,5 +42,5 @@ console.log(greeting)
 
 let greeted = "say Hi"
 let greeted = "say hello instead"
-console.log(greeted)
+console.log(greeted) 
 
