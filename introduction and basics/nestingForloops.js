@@ -4,8 +4,14 @@
 //    [[1,2], [3,4], [5,6]].
 
 function multiplyAll(arr) {
+    let product = 1
     // only change code below this line
+for (let i = 0; i < array.length; i++) {
+
+    
+}
 
     // only change code above this line
+    return product
 }
 multiplyAll([[1,2],[3,4],[5,6,7]])
