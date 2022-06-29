@@ -38,5 +38,9 @@ if (times > 3) {
 console.log(greeting)
 
 
+//updating 
 
+let greeted = "say Hi"
+greeted = "say hello instead"
+console.log(greeted)
 
