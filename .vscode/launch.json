@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\introduction and basics\\VarLetConst.js"
+            "program": "${workspaceFolder}\\introduction and basics\\nestingForloops.js"
         }
     ]
 }
