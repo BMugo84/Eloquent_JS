@@ -3,4 +3,11 @@
 function newfunction() {
     var hello = hello       //function(locally) scoped . can only be accesed byb the function    
 }
-console.log(hello)
+// console.log(hello)
+
+// var variables can be redeclared and updated
+
+var greeter = "say hello"
+console.log(greeter)
+var greeter = "say hi instead"
+console.log(greeter)
