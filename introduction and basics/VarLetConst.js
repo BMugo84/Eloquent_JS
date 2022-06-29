@@ -53,6 +53,13 @@ console.log(greet)
 
 // const
 
-const salimia = "jambo"
-salimia = "say habari gani instead"
-const salimia = "say habari gani instead"
+// const salimia = "jambo"
+// salimia = "say habari gani instead"
+// const salimia = "say habari gani instead"
+
+const salimia = {
+    message: "say jambo",
+    times: 4
+}
+salimia.message = "say habari instaed"
+console.log(salimia.message)
