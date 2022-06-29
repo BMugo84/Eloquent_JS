@@ -55,3 +55,4 @@ console.log(greet)
 
 const salimia = "jambo"
 salimia = "say habari gani instead"
+const salimia = "say habari gani instead"
