@@ -29,10 +29,14 @@ console.log(greeter)
 // let
 
 let greeting = "say hi"
-let times = 4
+let time = 4
 
 if (times > 3) {
     let hello = "say Bonjour instead"
-    console.log(hello)
+   console.log(hello)
 }
-console.log(hello)
+console.log(greeting)
+
+
+
+
