@@ -25,3 +25,14 @@ if (times>3) {
     var greeter = "say hello instead"
 }
 console.log(greeter)
+
+// let
+
+let greeting = "say hi"
+let times = 4
+
+if (times > 3) {
+    let hello = "say Bonjour instead"
+    console.log(hello)
+}
+console.log(hello)
