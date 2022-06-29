@@ -11,3 +11,8 @@ var greeter = "say hello"
 console.log(greeter)
 var greeter = "say hi instead"
 console.log(greeter)
+
+// hoisting of var
+
+console.log (responder)
+var responder = "say hey ho"
