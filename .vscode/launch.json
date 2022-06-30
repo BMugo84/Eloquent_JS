@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\introduction and basics\\nestingForloops.js"
+            "program": "${workspaceFolder}\\secret life of objects\\vectorType.js"
         }
     ]
 }
