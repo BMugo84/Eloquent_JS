@@ -19,4 +19,6 @@ class Vector {
    } 
 }
 
+class VectorIterator{
 
+}
