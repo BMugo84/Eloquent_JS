@@ -25,4 +25,8 @@ class VectorIterator{
         this.y = 0;
         this.matrix = matrix
     }
+
+    next(){
+
+    }
 }
