@@ -14,5 +14,7 @@ class Vector {
     get(x,y) {
         return this.content[y * width + x];
     }
-
+    set(x, y, value) {
+        this.content[y * this.width + x] = value;
+   } 
 }
