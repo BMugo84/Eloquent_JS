@@ -1,9 +1,13 @@
 class Vector {
-    //vector constructor that runs when Vector is calles with the new keyword
-    constructor(width,height, element = (x,y) => undefined) {//set initial values of element(x,y) as undefined if given no parameters
-        //sets instance properties for new matrix instance
-         this.width = width; //number of vector columns
-         this.height = height;//number of vector rows
-         this.content = [];//vector element values
+    constructor(width,height, element = (x,y) => undefined) {
+         this.width = width; 
+         this.height = height;
+         this.content = [];
+
+         for (let y = 0; y < 3 ; y++) {
+            for (let x = 0; x < 2; x++) {
+                this.content[y * width + x] = element(x,y);
+            }   
+         }
      }
 }
