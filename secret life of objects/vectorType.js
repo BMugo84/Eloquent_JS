@@ -20,5 +20,7 @@ class Vector {
 }
 
 class VectorIterator{
+    constructor(vector){
 
+    }
 }
