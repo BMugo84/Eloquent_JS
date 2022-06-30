@@ -28,5 +28,11 @@ class VectorIterator{
 
     next(){
         if (this.y == this.matrix.height) return {done: true }
+
+        let value = {
+            x: this.x,
+            y: this.y,
+            value: this.matrix.get(this.x, this.y)
+        }
     }
 }
