@@ -10,4 +10,9 @@ class Vector {
             }   
          }
      }
+
+    get(x,y) {
+        return this.content[y * width + x];
+    }
+
 }
