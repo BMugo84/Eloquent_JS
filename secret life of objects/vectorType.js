@@ -27,6 +27,6 @@ class VectorIterator{
     }
 
     next(){
-
+        if (this.y == this.matrix.height) return {done: true }
     }
 }
