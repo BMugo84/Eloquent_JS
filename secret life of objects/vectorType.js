@@ -35,5 +35,10 @@ class VectorIterator{
             value: this.matrix.get(this.x, this.y)
         }
         this.x++
+
+        if (this.x == this.vector.width) {
+            this.x = 0
+            this.y++
+        }
     }
 }
