@@ -23,16 +23,16 @@ class VectorIterator{
     constructor(vector){
         this.x = 0;
         this.y = 0;
-        this.matrix = matrix
+        this.vector = vector
     }
 
     next(){
-        if (this.y == this.matrix.height) return {done: true }
+        if (this.y == this.vector.height) return {done: true }
 
         let value = {
             x: this.x,
             y: this.y,
-            value: this.matrix.get(this.x, this.y)
+            value: this.vector.get(this.x, this.y)
         }
         this.x++
 
