@@ -47,3 +47,8 @@ class VectorIterator{
 Vector.prototype[Symbol.iterator] = function() {
     return new VectorIterator(this)
 }
+
+let vector = new Vector(1,2, (x,y) => `value ${x}, ${y}`)
+for (let {x, y, value}of vector){
+    console.log(` x is ${x},  y is ${y},  ${value}`)
+}
