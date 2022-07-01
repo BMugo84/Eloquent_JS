@@ -18,11 +18,16 @@ class Vector {
         this.y = y;
     }
     plus(vector) {
-        console.log(`test ${this.x},${this.y}`)
+        console.log(`test ${this.x + vector.x} ,${this.y + vector.y}`)
+    }
+    minus(vector) {
+        console.log(`test ${this.x - vector.x},${this.y - vector.y} `)
     }
 
 }
-let vec = new Vector(2,3)
-vec.plus()
+let vec1 = new Vector(2,3)
+let vec2 = new Vector(4,5)
 
 
+vec1.plus(vec2)
+vec1.minus(vec2)
