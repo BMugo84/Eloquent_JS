@@ -17,5 +17,12 @@ class Vector {
         this.x = x;
         this.y = y;
     }
+    plus(vector) {
+        console.log(`test ${this.x},${this.y}`)
+    }
 
 }
+let vec = new Vector(2,3)
+vec.plus()
+
+
