@@ -33,6 +33,14 @@ class Vector {
         console.log(`test ${this.length * vector.length * Math.cos(cosTheta * Math.PI/180)}`)
     }
 
+    static fromDegree(vector){
+        return Math.acos( (this.x * vector.x) + (this.y * vector.y)/Math.sqrt(((Math.pow(this.x,2)) + (Math.pow(this.y,2))) * ((Math.pow(vector.x,2)) + (Math.pow(vector.y,2)))))
+    }
+    
+    crossProduct(vector){
+        console.log(` test ${this.length * vector.length * Math.sin(Vector.fromDegree(vector))} `)
+    }
+
 }
 let vec1 = new Vector(6,8)
 let vec2 = new Vector(5,12)
@@ -45,3 +53,4 @@ console.log(vec2.length)
 vec1.multiplyScalar(2)
 
 vec1.dotProduct(vec2,59.5)
+vec1.crossProduct(vec2)
