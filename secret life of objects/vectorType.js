@@ -26,6 +26,12 @@ class Vector {
     get length() {
         return Math.sqrt((this.x * this.x) + (this.y * this.y))
     }
+    multiplyScalar(scalar){
+        console.log(`test ${this.x * scalar}, ${this.y * scalar}`)
+    }
+    dotProduct(vector,cosTheta){
+        console.log(`test ${this.x * this.y * Math.cos(cosTheta)}`)
+    }
 
 }
 let vec1 = new Vector(2,3)
@@ -35,3 +41,4 @@ let vec2 = new Vector(4,5)
 vec1.plus(vec2)
 vec1.minus(vec2)
 console.log(vec1.length)
+vec1.multiplyScalar(2)
