@@ -34,5 +34,6 @@ class VectorIterator{
             y: this.y,
             value: this.matrix.get(this.x, this.y)
         }
+        this.x++
     }
 }
