@@ -30,15 +30,18 @@ class Vector {
         console.log(`test ${this.x * scalar}, ${this.y * scalar}`)
     }
     dotProduct(vector,cosTheta){
-        console.log(`test ${this.x * this.y * Math.cos(cosTheta)}`)
+        console.log(`test ${this.length * vector.length * Math.cos(cosTheta * Math.PI/180)}`)
     }
 
 }
-let vec1 = new Vector(2,3)
-let vec2 = new Vector(4,5)
+let vec1 = new Vector(6,8)
+let vec2 = new Vector(5,12)
 
 
 vec1.plus(vec2)
 vec1.minus(vec2)
 console.log(vec1.length)
+console.log(vec2.length)
 vec1.multiplyScalar(2)
+
+vec1.dotProduct(vec2,59.5)
