@@ -43,3 +43,7 @@ class VectorIterator{
         return {value, done: false}
     }
 }
+
+Vector.prototype[Symbol.iterator] = function() {
+    return new VectorIterator(this)
+}
