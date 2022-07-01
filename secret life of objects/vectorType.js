@@ -40,5 +40,6 @@ class VectorIterator{
             this.x = 0
             this.y++
         }
+        return {value, done: false}
     }
 }
