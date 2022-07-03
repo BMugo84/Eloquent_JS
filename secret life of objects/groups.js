@@ -18,9 +18,11 @@ class Group {
         this.value = value
     }
     add(...item) {
-      console.log(`${this.value + item} `)
+      this.value = this.value + item
+      console.log(`${this.value}`)
     }
 }
 let object = new Group()
 object.add("item", "vali")
-object.add("you")
+object.add("has")
+object.add(3)
