@@ -14,15 +14,13 @@
 // and creates a group that contains all the values produced by iterating over it
 
 class Group {
-    constructor (...value){
-        this.value = value
+    constructor (group = []){
+        this.group = group
     }
-    add(...item) {
-      this.value = this.value + item
-      console.log(`${this.value}`)
-    }
+
 }
-let object = new Group()
-object.add("item", "vali")
-object.add("has")
-object.add(3)
+
+const object = new Group()
+
+console.log(object.group)
+
