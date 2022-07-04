@@ -25,7 +25,10 @@ class Group {
     }
     
     delete(item){
-        return this.group.pop(item)
+        if (this.group.includes(item)) {
+            i = this.group.indexOf(item)
+            return this.group.slice(0,i).concat(this.group.slice(i+1))
+        }
     }
 
 }
@@ -36,10 +39,11 @@ object.add([3])
 object.add([5])
 object.add([7])
 
-console.log(JSON.stringify(object.group))
+console.log(JSON.stringify(object))
 object.add([7])
 
-console.log(JSON.stringify(object.group))
+
+console.log(JSON.stringify(object))
 
 
 
