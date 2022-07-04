@@ -14,18 +14,37 @@
 // and creates a group that contains all the values produced by iterating over it
 
 class Group {
-    constructor (group = []){
-        this.group = group
+    constructor () {
+        this.group = []
     }
-    add(item){
-        return this.group.push(item)
+    add(item) {
+        if (!this.group.includes(item)) {
+             this.group.push(item)
+        }
+            
+    }
+    
+    delete(item){
+        return this.group.pop(item)
     }
 
 }
 
 const object = new Group()
 
-object.add([3,4])
-object.add([67])
+object.add([3])
+object.add([5])
+object.add([7])
+
+console.log(JSON.stringify(object.group))
+object.add([7])
+
 console.log(JSON.stringify(object.group))
 
+
+
+
+
+// for (let i = 0; i < this.group.length; i++) {
+
+// // }
