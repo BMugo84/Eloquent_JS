@@ -17,10 +17,15 @@ class Group {
     constructor (group = []){
         this.group = group
     }
+    add(item){
+        return this.group.push(item)
+    }
 
 }
 
 const object = new Group()
 
-console.log(object.group)
+object.add([3,4])
+object.add([67])
+console.log(JSON.stringify(object.group))
 
